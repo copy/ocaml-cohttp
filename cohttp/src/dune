@@ -7,8 +7,6 @@
  (name cohttp)
  (public_name cohttp)
  (synopsis "Co-operative Client/Server HTTP library.")
- (preprocess
-  (pps ppx_sexp_conv))
  (libraries
   base64
   logs
@@ -17,7 +15,6 @@
   sexplib0
   stringext
   uri
-  uri-sexp
   uri.services))
 
 (ocamllex accept_lexer)

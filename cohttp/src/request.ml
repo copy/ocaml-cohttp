@@ -104,7 +104,7 @@ let make_for_client ?headers ?chunked ?body_length ?absolute_form meth uri =
   make ~meth ~encoding ?headers ?absolute_form uri
 
 let pp_hum ppf r =
-  Format.fprintf ppf "%s" (r |> sexp_of_t |> Sexplib0.Sexp.to_string_hum)
+  Format.fprintf ppf "<not available>"
 
 (* Validate path when reading URI. Implemented for compatibility with old
    implementation rather than efficiency *)

@@ -19,7 +19,7 @@ open Sexplib0.Sexp_conv
 (* From <https://tools.ietf.org/html/rfc5988> *)
 module Rel = struct
   type t =
-    | Extension of Uri_sexp.t
+    | Extension of Uri.t
     | Alternate
     | Appendix
     | Bookmark
@@ -156,8 +156,7 @@ module Arc = struct
     }
 end
 
-type t = { context : Uri_sexp.t; arc : Arc.t; target : Uri_sexp.t }
-[@@deriving sexp]
+type t = { context : Uri.t; arc : Arc.t; target : Uri.t }
 
 (* TODO: this could be replaced with empty t/arc fupdate *)
 type param =
